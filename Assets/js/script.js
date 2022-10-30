@@ -17,11 +17,15 @@ $(".saveBtn").on("click", function(){
  var currentTime = moment().hours();
 
   function timeblockForColor(){
+
     $(".time-block").each(function(){
+
         var inHour = parseInt($(this).attr("id"));
+      //TODO: do i need to remove class each time?
 
         if(inHour > currentTime ){
             $(this).addClass("future");
+            
         }else if (inHour === currentTime){
             $(this).addClass("present");
 
