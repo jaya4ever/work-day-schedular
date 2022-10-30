@@ -34,7 +34,8 @@ $(".saveBtn").on("click", function(){
 
             
         }else{
-            $(this).addClass("past");
+            $(this).removeClass("future")
+            $(this).addClass("present")
         }
     })
     
