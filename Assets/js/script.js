@@ -3,7 +3,12 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
-var button = $(".saveBtn");
+var savebutton = $(".saveBtn");
+
+
+savebutton.on("click", function(){
+
+});
 
 
 
