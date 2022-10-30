@@ -34,12 +34,13 @@ $(".saveBtn").on("click", function(){
             $(this).addClass("past");
 
         }else if (inHour > currentTime){
-           // $(this).removeClass("past")
+            $(this).removeClass("past");
             $(this).addClass("future");
 
             
         }else{
-            //$(this).removeClass("future")
+            $(this).removeClass("future");
+            $(this).removeClass("past");
             $(this).addClass("present");
         }
     })
