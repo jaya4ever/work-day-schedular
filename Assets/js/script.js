@@ -50,7 +50,7 @@ $(".saveBtn").on("click", function(){
             var currentPlan = localStorage.getItem(currenthour);
 
 
-            if(currentPlan === null){
+            if(currentPlan !== null){
                 $(this).siblings(".description").val(currentPlan);
             }
 
