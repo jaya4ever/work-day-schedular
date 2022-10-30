@@ -3,11 +3,12 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
+
 //Debugging: defining save button
 var saveBtn = $(".saveBtn");
 
 // clicking the save button for the time block
-saveBtn.on("click", function(){
+$(".saveBtn").on("click", function(){
    var time = $(this).siblings(".hour").text();
 
    var textForDescription = $(this).siblings(".description").val();
@@ -24,22 +25,22 @@ saveBtn.on("click", function(){
 
     $(".time-block").each(function(){
 
-        //var inHour = parseInt($(this).attr("id"));
+        var inHour = parseInt($(this).attr("id"));
         //var inHour = moment($(this).attr("id"), ["hA"]).hour()
-        var inHour = $(this).data('hour')
+       // var inHour = $(this).data('hour')
 
       //TODO: do i need to remove class each time?
         if(inHour < currentTime ){
             $(this).addClass("past");
 
         }else if (inHour > currentTime){
-            $(this).removeClass("past")
-            $(this).addClass("future")
+           // $(this).removeClass("past")
+            $(this).addClass("future");
 
             
         }else{
-            $(this).removeClass("future")
-            $(this).addClass("present")
+            //$(this).removeClass("future")
+            $(this).addClass("present");
         }
     })
     
@@ -50,8 +51,8 @@ saveBtn.on("click", function(){
      function saveEventToUse(){
         $(".hour").each(function(){
 
-            var inHour =  $(this).text();
-            var currentPlan = localStorage.getItem(inHour);
+            var currentHour =  $(this).text();
+            var currentPlan = localStorage.getItem(currentHour);
 
 
             if(currentPlan !== null){
