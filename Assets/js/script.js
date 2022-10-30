@@ -19,9 +19,19 @@ $(".saveBtn").on("click", function(){
   function timeblockForColor(){
     $(".time-block").each(function(){
         var inHour = parseInt($(this).attr("id"));
+
+        if(inHour > currentTime ){
+            $(this).addClass("future");
+        }else if (inHour === currentTime){
+            $(this).addClass("present");
+
+            
+        }else{
+            $(this).addClass("past");
+        }
     })
     
-  }
+  };
 
 
 
