@@ -24,7 +24,8 @@ saveBtn.on("click", function(){
 
     $(".time-block").each(function(){
 
-        var inHour = parseInt($(this).attr("id"));
+        //var inHour = parseInt($(this).attr("id"));
+        var time = moment($(this).attr("id"), ["hA"]).hour()
 
       //TODO: do i need to remove class each time?
         if(inHour < currentTime ){
