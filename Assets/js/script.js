@@ -22,11 +22,11 @@ $(".saveBtn").on("click", function(){
 
     $(".time-block").each(function(){
 
-        var inHour = parseInt($(this).attr("id"));
+        var inHour = ($(this).attr("id"));
 
       //TODO: do i need to remove class each time?
-        if(inHour > currentTime ){
-            $(this).addClass("future");
+        if(inHour < currentTime ){
+            $(this).addClass("past");
 
         }else if (inHour === currentTime){
             $(this).addClass("present");
