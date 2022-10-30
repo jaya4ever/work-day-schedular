@@ -1,15 +1,13 @@
-// all in index.html
-//  how to use bootstraps
-// how to use moment.js
-// how to use jquerry
-// var h1El = $('<h1>');
 
-// h1El.text('hello Jaya!')
-// $('.container').append(h1El)
+
+
+$("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 function createElements() {
-
+//TODO: Have to add AM and PM. 
     for (var i = 9; i < 18; i++) {
+
+       
         // create the elements
         var div = $('<div>');
         var h6 = $('<h6>');
@@ -19,8 +17,9 @@ function createElements() {
         // add our classes
         div.addClass("time-block row");
         h6.addClass("hour col-1");
-        textarea.addClass("description col-10");
+        textarea.addClass("description col-10 red");
         button.addClass("saveBtn col-1");
+        
         
         
 
