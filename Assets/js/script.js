@@ -14,7 +14,11 @@ $(".saveBtn").on("click", function(){
 
 
 //each time block shows the color if it is present, past or future
-
+ var currentTime = moment().hours();
+ 
+  function timeblockForColor(){
+    var inHour = parseInt($(this).attr("id"));
+  }
 
 
 
