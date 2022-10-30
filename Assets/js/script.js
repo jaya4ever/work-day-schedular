@@ -8,7 +8,9 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 // clicking the save button for the time block
 $(".saveBtn").on("click", function(){
    var time = $(this).siblings(".hour").text();
+
    var textForDescription = $(this).siblings(".description").val();
+
    localStorage.setItem(textForDescription ,time)
 });
 
@@ -21,11 +23,11 @@ $(".saveBtn").on("click", function(){
     $(".time-block").each(function(){
 
         var inHour = parseInt($(this).attr("id"));
-      //TODO: do i need to remove class each time?
 
+      //TODO: do i need to remove class each time?
         if(inHour > currentTime ){
             $(this).addClass("future");
-            
+
         }else if (inHour === currentTime){
             $(this).addClass("present");
 
@@ -36,6 +38,21 @@ $(".saveBtn").on("click", function(){
     })
     
   };
+
+
+  //after refreshing page i see if saved events is there
+     function saveEventToUse(){
+        $(".hour").each(function(){
+
+            var currenthour =  $(this).text();
+            var currentPlan = localStorage.getItem(currenthour);
+
+
+            
+
+        })
+     }
+
 
 
 
