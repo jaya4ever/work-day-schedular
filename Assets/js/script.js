@@ -3,26 +3,28 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
-
+//Debugging: defining save button
+var saveBtn = $(".saveBtn");
 
 // clicking the save button for the time block
-$(".saveBtn").on("click", function(){
+saveBtn.on("click", function(){
    var time = $(this).siblings(".hour").text();
 
    var textForDescription = $(this).siblings(".description").val();
 
-   localStorage.setItem(textForDescription ,time)
+   localStorage.setItem(time,textForDescription );
 });
 
 
 //each time block shows the color if it is present, past or future
- var currentTime = moment().hours();
+ //var currentTime = moment().hours();
 
   function timeblockForColor(){
+    var currentTime = moment().hours();
 
     $(".time-block").each(function(){
 
-        var inHour = ($(this).attr("id"));
+        var inHour = parseInt($(this).attr("id"));
 
       //TODO: do i need to remove class each time?
         if(inHour < currentTime ){
@@ -46,8 +48,8 @@ $(".saveBtn").on("click", function(){
      function saveEventToUse(){
         $(".hour").each(function(){
 
-            var currenthour =  $(this).text();
-            var currentPlan = localStorage.getItem(currenthour);
+            var inHour =  $(this).text();
+            var currentPlan = localStorage.getItem(inHour);
 
 
             if(currentPlan !== null){
