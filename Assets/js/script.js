@@ -28,8 +28,9 @@ $(".saveBtn").on("click", function(){
         if(inHour < currentTime ){
             $(this).addClass("past");
 
-        }else if (inHour === currentTime){
-            $(this).addClass("present");
+        }else if (inHour > currentTime){
+            $(this).removeClass("past")
+            $(this).addClass("future")
 
             
         }else{
