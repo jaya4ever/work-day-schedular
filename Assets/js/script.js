@@ -46,11 +46,12 @@ function timeblockForColor() {
             $(this).addClass("present");
         }
     })
-       
+
     //timeblockForColor();
 
 };
-       timeblockForColor();
+
+timeblockForColor();
 
 
 
@@ -68,7 +69,8 @@ function saveEvents() {
 
     });
 };
-          saveEvents();
+
+saveEvents();
 
 
 
