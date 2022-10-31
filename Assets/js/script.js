@@ -1,14 +1,14 @@
 
-// currnt day and time at the top of the page
+// current day and time at the top of the page
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 
 //defining save button(do I need to define it like this in jQuerry or just use $(".saveBtn") at line 11?)
-var saveButton = $(".saveBtn");
+//var saveButton = $(".saveBtn");
 
-// clicking the save button for the time block
-saveButton.on("click", function () {
+// clicking the save button for the time block and setting items in local storage
+$(".saveBtn").on("click", function () {
     var time = $(this).siblings(".hour").text();
 
     var textForDescription = $(this).siblings(".description").val();
@@ -46,9 +46,11 @@ function timeblockForColor() {
             $(this).addClass("present");
         }
     })
+       
+    //timeblockForColor();
 
 };
-
+       timeblockForColor();
 
 
 
@@ -65,13 +67,8 @@ function saveEvents() {
         }
 
     });
-}
-
-
-
-//calling functions
-timeblockForColor();
-saveEvents();
+};
+          saveEvents();
 
 
 
