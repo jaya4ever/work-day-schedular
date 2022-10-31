@@ -1,5 +1,5 @@
 
-// cureent day and time at the top of the page
+// currnt day and time at the top of the page
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
@@ -49,7 +49,7 @@ $(".saveBtn").on("click", function(){
         }
     })
     
-  }
+  };
   
 
 
@@ -70,7 +70,7 @@ $(".saveBtn").on("click", function(){
     
      
 
-     //Invoking function
+     //calling functions
      timeblockForColor();
      saveEventToUse();
 
