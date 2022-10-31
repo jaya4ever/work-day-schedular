@@ -21,8 +21,12 @@ $(".saveBtn").on("click", function(){
  //var currentTime = moment().hours();
 
   function timeblockForColor(){
+    
+    // this one get the current number of hours
     var currentTime = moment().hours();
 
+
+    // using loop for time blocks for past present and future as they change color accordingly 
     $(".time-block").each(function(){
 
         var inHour = parseInt($(this).attr("id"));
@@ -45,7 +49,8 @@ $(".saveBtn").on("click", function(){
         }
     })
     
-  };
+  }
+  
 
 
   //after refreshing page i see if saved events is there
@@ -62,7 +67,8 @@ $(".saveBtn").on("click", function(){
 
         });
      }
-  
+    
+     
 
      //Invoking function
      timeblockForColor();
