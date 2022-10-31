@@ -5,7 +5,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 
 //Debugging: defining save button
-var saveBtn = $(".saveBtn");
+//var saveBtn = $(".saveBtn");
 
 // clicking the save button for the time block
 $(".saveBtn").on("click", function(){
