@@ -21,7 +21,7 @@ $(".saveBtn").on("click", function(){
  //var currentTime = moment().hours();
 
   function timeblockForColor(){
-    
+
     // this one get the current number of hours
     var currentTime = moment().hours();
 
@@ -29,15 +29,15 @@ $(".saveBtn").on("click", function(){
     // using loop for time blocks for past present and future as they change color accordingly 
     $(".time-block").each(function(){
 
-        var inHour = parseInt($(this).attr("id"));
+        var timeBlock = parseInt($(this).attr("id"));
         //var inHour = moment($(this).attr("id"), ["hA"]).hour()
        // var inHour = $(this).data('hour')
 
       //TODO: do i need to remove class each time?
-        if(inHour < currentTime ){
+        if(timeBlock < currentTime ){
             $(this).addClass("past");
 
-        }else if (inHour > currentTime){
+        }else if (timeBlock > currentTime){
             $(this).removeClass("past");
             $(this).addClass("future");
 
