@@ -1,7 +1,7 @@
 
 // current day and time at the top of the page
-$("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-$("#currentTime").text(moment().format("h:mm:ss a"));
+$("#currentDay").text(moment().format("dddd, MMMM Do YYYY h:mm:ss a"));
+//$("#currentTime").text(moment().format("h:mm:ss a"));
 
 
 //defining save button(do I need to define it like this in jQuerry or just use $(".saveBtn") at line 11?)
